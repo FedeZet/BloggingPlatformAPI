@@ -4,10 +4,12 @@ import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
-import java.sql.Timestamp
+import org.hibernate.annotations.CreationTimestamp
+import org.hibernate.annotations.UpdateTimestamp
+import java.time.LocalDateTime
 
 @Entity
-data class Blog(
+data class Post(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long,
@@ -15,6 +17,9 @@ data class Blog(
     val content: String,
     val category: String,
     val tags: Set<String>,
-    val createdAt: Timestamp,
-    val updateAt: Timestamp
+
+    @CreationTimestamp
+    val createdAt: LocalDateTime? = null,
+    @UpdateTimestamp
+    val updateAt: LocalDateTime? = null
 )
