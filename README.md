@@ -47,7 +47,7 @@ spring.jpa.hibernate.ddl-auto=update
 The API provides the following endpoints:
 
 - `GET /posts`: Retrieves a list of all posts.
-- `GET /posts?term="Búsqueda"`: Retrieves a list of all posts that contain the word inside the `term` parameter.
+- `GET /posts?term="Search"`: Retrieves a list of all posts that contain the word inside the `term` parameter.
 - `GET /posts/{1}`: Retrieves a post by its ID.
 - `POST /posts`: Creates a new post.
 - `PUT /posts/{id}`: Updates a post by its ID.
