@@ -18,11 +18,13 @@ It is not necessary to manually create the database or tables, as the project in
 Make sure MySQL is installed and configured correctly, then update the credentials in `application.properties`:
 
 ```properties
+# Database configuration
 spring.datasource.url=jdbc:mysql://localhost:3306/blogging_db?createDatabaseIfNotExist=true
 spring.datasource.username=user
 spring.datasource.password=password
-spring.jpa.hibernate.ddl-auto=update
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=update
 ```
 
 ## Running the Project
@@ -61,7 +63,3 @@ The API provides the following endpoints:
 ## Contributions
 
 Contributions are welcome to improve the code and help us learn more about **Spring**. If you find areas for improvement, feel free to contribute.
-
-## License
-
-This project is licensed under the MIT License.
